@@ -79,10 +79,12 @@ main {
 
 .x-icon {
     position: absolute;
-    right: 25px;
+    right: 15px;
     top: 25px;
     height: 24px;
     width: auto;
+    opacity: .3;
+    z-index: 1;
 }
 
 .setup {
@@ -105,8 +107,8 @@ main {
 }
 
 .joke-container.close {
-    transform: translateY(300px);
-    transition: 1s;
+    position: absolute;
+    bottom: -200px;
 }
 
 .mute-button {

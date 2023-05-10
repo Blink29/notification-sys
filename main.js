@@ -12,26 +12,26 @@ class Joke {
   }
 
   async getjoke() {
-    // const URL = "https://official-joke-api.appspot.com/random_joke";
-    // const request = await fetch(URL);
-    // const response = await request.json();
-    // const type = response.type;
-    // const id = response.id;
-    // const setup = response.setup;
-    // const punchline = response.punchline;
-    // return {
-    //   type,
-    //   id,
-    //   setup,
-    //   punchline,
-    // };
-    const joke = {
-      type: "joke",
-      id: "id",
-      setup: "Where do you learn to make banana splits?",
-      punchline: "At sundae school.",
+    const URL = "https://official-joke-api.appspot.com/random_joke";
+    const request = await fetch(URL);
+    const response = await request.json();
+    const type = response.type;
+    const id = response.id;
+    const setup = response.setup;
+    const punchline = response.punchline;
+    return {
+      type,
+      id,
+      setup,
+      punchline,
     };
-    return joke;
+    // const joke = {
+    //   type: "joke",
+    //   id: "id",
+    //   setup: "Where do you learn to make banana splits?",
+    //   punchline: "At sundae school.",
+    // };
+    // return joke;
   }
 
   async loadJoke() {
@@ -104,7 +104,7 @@ close.addEventListener("click", () => {
   jokeContainer.classList.add("close");
   setTimeout(() => {
     jokeContainer.classList.remove("close");
-  }, 2000);
+  }, 4600);
 });
 
 let isDarkMode = true;
